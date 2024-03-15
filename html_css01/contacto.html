@@ -9,12 +9,12 @@
 <body>
 <header>
     <div class="caja">
-        <h1><img src="./imagenes/logo.png"></h1>
+        <h1><img src="./imagenes/logo.png" alt="logo de la barbería Alura"></h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li><a href="radio-email.html">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </div>
@@ -22,19 +22,19 @@
 <main>
     <form>
         <label for="nombreApellido">Nombre y Apellido</label>
-        <input type="text" id="nombreApellido" class="input-padron">
+        <input type="text" id="nombreApellido" class="input-padron" required>
 
         <label for="correoElectronico">Correo Electrónico</label>
-        <input type="email" id="correoElectronico" class="input-padron">
+        <input type="email" id="correoElectronico" class="input-padron" required placeholder="email@dominio.com">
 
         <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" class="input-padron">
+        <input type="tel" id="telefono" class="input-padron" required placeholder="(XX) XXXX XXXX">
 
         <label for="mensaje">Mensaje</label>
-        <textarea cols="70" rows="10" id="mensaje" class="input-padron"></textarea>
+        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
 
-        <div>
-            <p>¿Cómo le gustaria que lo contactemos?</p>
+        <fieldset>
+            <legend>¿Cómo le gustaría que lo contactemos?</legend>
 
             <label for="radio-email"><input type="radio" name="contacto" id="radio-email" value="email">Email
             </label>
@@ -44,26 +44,26 @@
             </label>
 
             <label for="radio-whatsapp">
-            <input type="radio" name="contacto" id="radio-whatsapp" value="whatsapp">WhatsApp
+            <input type="radio" name="contacto" id="radio-whatsapp" value="whatsapp" checked>WhatsApp
             </label>
-        </div>
+        </fieldset>
 
-        <div>
-            <p>¿En cuál horario prefiere ser atendido?</p>
-            <select name="" id="">
+        <fieldset>
+            <legend>¿En cuál horario prefiere ser atendido?</legend>
+            <label for="horarioContacto"></label><select name="horarioContacto" id="horarioContacto">
                 <option value="manana">Mañana</option>
                 <option value="tarde">Tarde</option>
                 <option value="noche">Noche</option>
             </select>
-        </div>
+        </fieldset>
 
-        <label class="checkbox"><input type="checkbox">¿Le gustaría recibir novedades de la Barbería Alura?</label>
+        <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
 
         <input type="submit" value="Enviar Formulario">
     </form>
 </main>
 <footer>
-    <img src="imagenes/logo-blanco.png">
+    <img src="imagenes/logo-blanco.png" alt="logo de la barbería Alura">
     <p class="copyright">&copy; Copyright Barbería Alura - 2024</p>
 </footer>
 </body>
