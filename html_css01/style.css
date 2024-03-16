@@ -96,11 +96,6 @@ footer{
     margin: 20px;
 }
 
-main{
-    width: 940px;
-    margin: 0 auto;
-}
-
 form {
     margin: 40px 0;
 }
@@ -161,6 +156,13 @@ td, th{
     width: 100%;
 }
 
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
 .titulo-principal{
     text-align: center;
     font-size: 2em;
@@ -189,11 +191,22 @@ td, th{
 .mapa{
     padding: 3em 0;
     text-align: center;
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p{
     margin: 0 0 2em;
     text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
 }
 
 .contenido-diferenciales{
@@ -211,12 +224,22 @@ td, th{
     line-height: 1.5;
 }
 
+.items::before{
+    content: "\2605 ";
+}
+
 .items:first-child{
     font-weight: bold;
 }
 
 .imagen-diferenciales{
     width: 60%;
+    transition: 0.4s;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.3;
 }
 
 .video{
@@ -226,4 +249,21 @@ td, th{
 
 .video iframe{
     border: none;
+}
+
+@media screen and (max-width: 480px){
+    h1{
+        text-align: center;
+    }
+
+    nav{
+       position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
 }
